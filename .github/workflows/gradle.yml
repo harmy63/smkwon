@@ -40,3 +40,5 @@ jobs:
         arguments: build
     - name: Run ls -al2
       run: ls -al
+    - name: Run ls -al3
+      run: ls -al build/libs
