@@ -43,4 +43,4 @@ jobs:
     - name: Run ls -al3
       run: ls -al build/libs
     - name: scp jar file
-      run: scp -P 4222 build/libs/smkown-0.0.1-SNAPSHOT.jar fmmsysops.fmm-dev@54.72.146.174:/home/fmmsysops.fmm-dev
+      run: sshpass -p 'devSposysmmf>%2' scp -P 4222 -oStrictHostKeyChecking=no -r build/libs/smkown-0.0.1-SNAPSHOT.jar fmmsysops.fmm-dev@54.72.146.174:/home/fmmsysops.fmm-dev
