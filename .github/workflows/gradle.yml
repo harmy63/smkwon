@@ -12,6 +12,9 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+env:
+  USER_ID: ${{ secrets.TID}}
+  USER_PWD: ${{ secrets.TPWD}}
 
 jobs:
   build:
@@ -19,6 +22,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: SHOW USER_ID
+      run: echo $USER_ID
+    - name: SHOW USER_PWD
+      run: echo $USER_PWD
     - name: Run pwd
       run: pwd
     - name: Run ls -al
