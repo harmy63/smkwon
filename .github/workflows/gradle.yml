@@ -15,6 +15,8 @@ on:
 env:
   USER_ID: $ {{ secrets.TID }}
   USER_PWD: $ {{ secrets.TPWD }}
+  TEST1: ${{ secrets.TID }}
+  TEST2: ${{ secrets.SMKWON_SSH_ID }}
 
 jobs:
   build:
@@ -22,6 +24,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: echo $TEST1
+    - run: echo $TEST2
     - run: echo $USER_ID
     - name: SHOW USER_ID
       run: echo $USER_ID
