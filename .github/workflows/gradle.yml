@@ -1,29 +1,17 @@
-name: Java Github Action with Gradle 111
+name: Self-test
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       test:
         type: boolean
         default: false
         description: A pointless checkbox.
-env:
-  USER_ID: $ {{ secrets.TID }}
-  USER_PWD: $ {{ secrets.TPWD }}
-  TEST1: ${{ secrets.TID }}
-  TEST2: ${{ secrets.SMKWON_SSH_ID }}
 
 jobs:
-  build:
+  wait:
+    name: Wait
     runs-on: ubuntu-latest
-
     steps:
-    - run: |
-         echo "Log level: $LEVEL"
-         echo "Tags: $TAGS"
-         echo "Environment: $ENVIRONMENT"
-      env:
-         LEVEL: ${{ inputs.logLevel }}
-         TAGS: ${{ inputs.tags }}
-         ENVIRONMENT: ${{ inputs.environment }}
-
+    - name: Do nothing
+      run: sleep 30
