@@ -1,4 +1,4 @@
-name: manual-input-workflow
+name: manual-input-workflow1
 
 on:
   workflow_dispatch:
