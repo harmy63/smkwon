@@ -1,12 +1,12 @@
 name: Java Github Action with Gradle
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
- 
+on: [pull_request,workflow_dispatch]
+  #push:
+  #  branches: [ "main" ]
+  #pull_request:
+  #  branches: [ "main" ]
+  #workflow_dispatch:
+  #  inputs: [ "main" ]
 env:
   USER_ID: $ {{ secrets.TID }}
   USER_PWD: $ {{ secrets.TPWD }}
