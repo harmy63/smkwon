@@ -1,12 +1,12 @@
 name: Java Github Action with Gradle 111
 
-on: [pull_request,workflow_dispatch]
-  #push:
-  #  branches: [ "main" ]
-  #pull_request:
-  #  branches: [ "main" ]
-  #workflow_dispatch:
-  #  inputs: [ "main" ]
+on: 
+  workflow_dispatch:
+    inputs:
+      test:
+        type: boolean
+        default: false
+        description: A pointless checkbox.
 env:
   USER_ID: $ {{ secrets.TID }}
   USER_PWD: $ {{ secrets.TPWD }}
