@@ -1,4 +1,4 @@
-name: Self-test
+name: manual-input-workflow
 
 on:
   workflow_dispatch:
